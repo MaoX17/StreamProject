@@ -1,8 +1,6 @@
 # StreamProject
 
-Web application che rendere visibile l'attività quotidiana svolta dal
-personale del CED per fornire servizi informatici in modo da incidere
-il meno possibile sul bilancio dell'Ente. ( http://risparmio.provincia.prato.it/ )
+Web application che sfrutta ffmpeg per mandare file in streaming su un rtmp pubblico (come youtube live streaming) pianificato tramite cron
 
 Questa applicazione Web è scritta in php e sfrutta le funzionalità di
 Propel ORM Necessita di php >= 5.4.* e mysql >= 5.1.*
