@@ -1,13 +1,13 @@
 propel:
         general:
-                project: stream-project2
-                version: 0.3
+                project: stream-project
+                version: 0.4
 
         paths:
-                projectDir:  /var/www/html/stream-project2
-                schemaDir: /var/www/html/stream-project2/propel
-                phpDir: /var/www/html/stream-project2/propel/class
-                phpConfDir: /var/www/html/stream-project2/propel
+                projectDir:  /var/www/html/stream-project
+                schemaDir: /var/www/html/stream-project/propel
+                phpDir: /var/www/html/stream-project/propel/class
+                phpConfDir: /var/www/html/stream-project/propel
                 # Directory in which your composer.json resides
                 # #      composerDir: {empty}
 
