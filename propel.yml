@@ -1,0 +1,31 @@
+propel:
+        general:
+                project: stream-project2
+                version: 0.3
+
+        paths:
+                projectDir:  /var/www/html/stream-project2
+                schemaDir: /var/www/html/stream-project2/propel
+                phpDir: /var/www/html/stream-project2/propel/class
+                phpConfDir: /var/www/html/stream-project2/propel
+                # Directory in which your composer.json resides
+                # #      composerDir: {empty}
+
+## All Database settings ##
+        database:
+                connections:
+                        default:
+                                adapter: mysql
+                                dsn: "mysql:host=localhost;dbname=stream-project"
+                                user: root
+                                password:
+                                settings:
+                                    charset: utf8
+
+                        stream-project:
+                                adapter: mysql
+                                dsn: "mysql:host=localhost;dbname=stream-project"
+                                user: root
+                                password:
+                                settings:
+                                    charset: utf8

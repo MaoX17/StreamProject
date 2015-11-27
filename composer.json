@@ -1,0 +1,36 @@
+{
+    "name": "mproietti/stream-project",
+    "description": "This package permit to set stream cron on youtube",
+    "version": "0.3",
+    "type": "library",
+    "keywords": ["cron", "youtube", "stream"],
+    "homepage": "http://blog.maurizio.proietti.nem",
+    "time": "2015-10-15",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Maurizio Proietti",
+            "email": "maurizio.proietti@gmail.com",
+            "homepage": "http://blog.maurizio.proietti.name",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "maurizio.proietti@gmail.com"
+    },
+    "require": {
+        "robloach/component-installer": "dev-master",
+	"propel/propel": "~2.0@dev",
+	"codeguy/upload": "dev-master",
+	"components/jquery": "1.9.*",
+	"components/bootstrap": "3.3.*",
+        "components/bootstrap-datetimepicker": "2.3.*"
+    },
+    "config": {
+        "component-dir": "libs/js",
+        "component-baseurl": "./libs/js"
+    },
+    "autoload": {
+        "classmap": ["propel/class/"]
+    }
+}

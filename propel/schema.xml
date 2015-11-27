@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" defaultPhpNamingMethod="underscore">
+  <table name="crons" idMethod="native" phpName="Crons">
+    <column name="idcron" phpName="Idcron" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="minuto" phpName="Minuto" type="VARCHAR" size="4"/>
+    <column name="ora" phpName="Ora" type="VARCHAR" size="4"/>
+    <column name="giorno_del_mese" phpName="GiornoDelMese" type="VARCHAR" size="4"/>
+    <column name="mese" phpName="Mese" type="VARCHAR" size="4"/>
+    <column name="giorno_della_settimana" phpName="GiornoDellaSettimana" type="VARCHAR" size="4"/>
+    <column name="comando" phpName="Comando" type="VARCHAR" size="500"/>
+    <column name="videos_has_destinazioni_idvideos_has_destinazioni" phpName="VideosHasDestinazioniIdvideosHasDestinazioni" type="INTEGER" sqlType="int(11) unsigned" required="true"/>
+    <column name="next_date" phpName="NextDate" type="DATE"/>
+    <column name="next_time" phpName="NextTime" type="TIME"/>
+    <column name="inviato" phpName="Inviato" type="VARCHAR" size="2" defaultValue="n"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="MyISAM"/>
+    </vendor>
+  </table>
+  <table name="destinazioni" idMethod="native" phpName="Destinazioni">
+    <column name="iddestinazione" phpName="Iddestinazione" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="stream_server" phpName="StreamServer" type="VARCHAR" size="255"/>
+    <column name="key_server" phpName="KeyServer" type="VARCHAR" size="255"/>
+    <column name="parametri" phpName="Parametri" type="VARCHAR" size="255"/>
+    <column name="nome" phpName="Nome" type="VARCHAR" size="255"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="videos" idMethod="native" phpName="Videos">
+    <column name="idvideo" phpName="Idvideo" type="INTEGER" sqlType="int(11) unsigned" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="link_video" phpName="LinkVideo" type="VARCHAR" size="255"/>
+    <column name="size_video" phpName="SizeVideo" type="INTEGER"/>
+    <column name="uploaded_video" phpName="UploadedVideo" type="BOOLEAN" size="1"/>
+    <column name="nome" phpName="Nome" type="VARCHAR" size="255"/>
+    <column name="idyoutube" phpName="Idyoutube" type="VARCHAR" size="255"/>
+    <column name="video_md5" phpName="VideoMd5" type="VARCHAR" size="255"/>
+    <column name="convertito" phpName="Convertito" type="VARCHAR" size="2" defaultValue="n"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="MyISAM"/>
+    </vendor>
+  </table>
+  <table name="videos_has_destinazioni" idMethod="native" phpName="VideosHasDestinazioni">
+    <column name="idvideos_has_destinazioni" phpName="IdvideosHasDestinazioni" type="INTEGER" sqlType="int(11) unsigned" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="videos_idvideo" phpName="VideosIdvideo" type="INTEGER" sqlType="int(11) unsigned" required="true"/>
+    <column name="destinazioni_iddestinazione" phpName="DestinazioniIddestinazione" type="INTEGER" required="true"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="MyISAM"/>
+    </vendor>
+  </table>
+</database>
