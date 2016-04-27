@@ -3,7 +3,7 @@ Navicat MySQL Data Transfer
 
 Source Server         : Z_DEDICATO
 Source Server Version : 50173
-Source Host           : 85.234.146.73:3306
+Source Host           : xx.xxx.xxx.xx:3306
 Source Database       : stream-project
 
 Target Server Type    : MYSQL
